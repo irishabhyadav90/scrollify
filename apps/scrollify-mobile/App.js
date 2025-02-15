@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { useFetchData } from '@scrollify/hooks';
+import InfiniteScrollNative from './components/InfiniteScrollList';
 
 const App = () => {
-  const { counter, updateCounter } = useFetchData();
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text onPress={() => updateCounter(prev => prev + 1)}>{counter}</Text>
+      <InfiniteScrollNative />
     </View>
   );
 }
