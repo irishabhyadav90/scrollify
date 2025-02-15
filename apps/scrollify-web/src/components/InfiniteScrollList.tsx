@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback } from 'react';
 import { FixedSizeList as List, ListOnItemsRenderedProps } from 'react-window';
 import { useInfiniteScroll } from '@scrollify/hooks';
