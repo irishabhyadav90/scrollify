@@ -13,10 +13,8 @@ type PaginationAction<T> =
     | { type: 'FETCH_ERROR' };
 
 
-// Constants
 const PAGE_SIZE = 10;
 
-// Initial State
 const initialState: PaginationState<any> = {
     data: [],
     page: 1,
@@ -24,7 +22,6 @@ const initialState: PaginationState<any> = {
     hasMore: true,
 };
 
-// Reducer Function
 const paginationReducer = (state: PaginationState<any>, action: PaginationAction<any>) => {
     switch (action.type) {
         case 'FETCH_START':
@@ -44,7 +41,7 @@ const paginationReducer = (state: PaginationState<any>, action: PaginationAction
     }
 };
 
-// Pagination Hook (Generic)
+
 export const usePagination = () => {
     const [state, dispatch] = useReducer(paginationReducer, initialState);
 
