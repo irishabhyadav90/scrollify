@@ -12,6 +12,8 @@
   "dependencies": {
     "@babel/runtime": "^7.26.9",
     "@scrollify/hooks": "workspace:*",
+    "@scrollify/services": "workspace:*",
+    "axios": "^1.7.9",
     "expo": "~52.0.33",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
