@@ -1,13 +1,14 @@
 import React, { useCallback } from 'react';
 import { FlatList, ActivityIndicator, View, StyleSheet, SafeAreaView } from 'react-native';
 import { useInfiniteScroll } from '@scrollify/hooks';
+import { fetchPosts } from '@scrollify/services';
 import PostItem from './PostItem';
 
 const ITEM_HEIGHT = 50;
 
 const InfiniteScrollNative = () => {
 
-    const { data, loading, hasMore, loadMore } = useInfiniteScroll();
+    const { data, loading, hasMore, loadMore } = useInfiniteScroll(fetchPosts);
     const { container } = styles;
 
     const renderItem = useCallback(({ item }) => <PostItem title={item.title} />, [])

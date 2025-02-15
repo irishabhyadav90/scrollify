@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { useFetchDataWithPagination } from './useFetchDataWithPagination';
-import { fetchPosts } from '../services/api';
 
-export const useInfiniteScroll = () => {
-    const { data, loading, hasMore, fetchData } = useFetchDataWithPagination(fetchPosts);
+export const useInfiniteScroll = <T>(fetchFunction: (page: number, limit: number) => Promise<T[]>) => {
+    const { data, loading, hasMore, fetchData } = useFetchDataWithPagination(fetchFunction);
 
     useEffect(() => {
         fetchData();

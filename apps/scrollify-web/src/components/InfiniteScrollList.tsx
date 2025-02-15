@@ -1,10 +1,11 @@
 import React, { useCallback } from 'react';
 import { FixedSizeList as List, ListOnItemsRenderedProps } from 'react-window';
 import { useInfiniteScroll } from '@scrollify/hooks';
+import { fetchPosts } from '@scrollify/services';
 import PostItem from './PostItem';
 
 const InfiniteScrollList = () => {
-    const { data, loading, hasMore, loadMore } = useInfiniteScroll();
+    const { data, loading, hasMore, loadMore } = useInfiniteScroll(fetchPosts);
 
     const handleItemsRendered = useCallback(
         ({ visibleStopIndex }: ListOnItemsRenderedProps) => {
