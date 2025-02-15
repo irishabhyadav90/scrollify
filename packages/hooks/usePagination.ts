@@ -48,7 +48,7 @@ const paginationReducer = (state: PaginationState<any>, action: PaginationAction
 export const usePagination = () => {
     const [state, dispatch] = useReducer(paginationReducer, initialState);
 
-    const updateData = useCallback((newData: PaginationState<any>) => {
+    const updateData = useCallback((newData: any[]) => {
         dispatch({ type: 'FETCH_SUCCESS', payload: newData });
     }, []);
 
