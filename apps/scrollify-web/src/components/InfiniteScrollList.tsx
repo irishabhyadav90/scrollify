@@ -2,8 +2,8 @@
 
 import React, { useCallback } from 'react';
 import { FixedSizeList as List, ListOnItemsRenderedProps } from 'react-window';
-import { useInfiniteScroll } from '@scrollify/hooks';
-import { fetchPosts } from '@scrollify/services';
+import { useInfiniteScroll } from '@repo/hooks';
+import { fetchPosts } from '@repo/services';
 import PostItem from './PostItem';
 
 const InfiniteScrollList = () => {
