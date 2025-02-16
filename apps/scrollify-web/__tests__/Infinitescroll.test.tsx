@@ -2,9 +2,9 @@ import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import InfiniteScrollList from "../src/components/InfiniteScrollList";
-import { useInfiniteScroll } from "@scrollify/hooks";
+import { useInfiniteScroll } from "@repo/hooks";
 
-jest.mock("@scrollify/hooks", () => ({
+jest.mock("@repo/hooks", () => ({
     useInfiniteScroll: jest.fn(),
 }));
 

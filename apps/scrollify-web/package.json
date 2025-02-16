@@ -10,8 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@scrollify/hooks": "workspace:*",
-    "@scrollify/services": "workspace:*",
+    "@repo/hooks": "workspace:*",
+    "@repo/services": "workspace:*",
     "axios": "^1.7.9",
     "jest-environment-jsdom": "^29.7.0",
     "next": "15.1.7",
